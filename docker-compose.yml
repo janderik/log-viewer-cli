@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  log-viewer:
+    build: .
+    volumes:
+      - /var/log:/logs:ro
+    command: /logs/syslog
+    stdin_open: true
+    tty: true
